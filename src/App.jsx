@@ -26,27 +26,27 @@ function App() {
         <Route exact path="/Register" element={<Register />} />
         <Route path="*" element={<NotFound/>}/>
    {/* Rutas del usuario */}
-        <Route exact path="/Home" element={<RoutesUser element={<Home />} />} />
+        <Route exact path="/Home" element={<Home />} />
        
         <Route
           exact
           path="/Mydata"
-          element={<RoutesUser element={<Mydata />} />}
+          element={<Mydata  />}
         />
         <Route
           exact
           path="/Carrito"
-          element={<RoutesUser element={<Carrito />} />}
+          element={<Carrito  />}
         />
         <Route
           exact
           path="/Games/:id"
-          element={<RoutesUser element={<Games />} />}
+          element={<Games />}
         />
         <Route
           exact
           path="/Favoritos"
-          element={<RoutesUser element={<Favoritos />} />}
+          element={<Favoritos />}
         />
 
         {/* Rutas Admin */}
