@@ -14,7 +14,6 @@ import AdminGetProducts from "./Pages/admin/AdminProducts";
 import Carrito from "./Pages/Carrito";
 import Favoritos from "./Pages/Favoritos";
 import PrivateRoute from "./Hooks/PrivateRoute";
-import RoutesUser from "./Hooks/RoutesUsers";
 import NotFound from "./Pages/NotFound";
 function App() {
   return (
