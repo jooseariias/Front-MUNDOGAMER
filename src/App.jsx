@@ -13,7 +13,7 @@ import AdminUser from "./Pages/admin/AdminUser";
 import AdminGetProducts from "./Pages/admin/AdminProducts";
 import Carrito from "./Pages/Carrito";
 import Favoritos from "./Pages/Favoritos";
-import PrivateRoute from "./Hooks/PrivateRoute";
+
 import NotFound from "./Pages/NotFound";
 function App() {
   return (
@@ -49,18 +49,18 @@ function App() {
         />
 
         {/* Rutas Admin */}
-        <Route path="/Admin" element={<PrivateRoute element={<Admin />} />} />
+        <Route path="/Admin" element={<Admin  />} />
         <Route
           path="/Admin/Product"
-          element={<PrivateRoute element={<AdminProduct />} />}
+          element={<AdminProduct  />}
         />
         <Route
           path="/Admin/Users"
-          element={<PrivateRoute element={<AdminUser />} />}
+          element={<AdminUser />}
         />
         <Route
           path="/Admin/GetProducts"
-          element={<PrivateRoute element={<AdminGetProducts />} />}
+          element={<AdminGetProducts />}
         />
       </Routes>
     </>
