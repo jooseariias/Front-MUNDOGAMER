@@ -1,14 +1,15 @@
 import React from "react";
 import img from "../assets/2.png";
 import Google from "../Utils/Auth";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { LoginUser } from "../redux/actions";
 import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-export default function Login() {
 
+export default function Login() {
+  const redirectToHome = useNavigate()
   const dispatch = useDispatch();
   const {
     register,
@@ -20,7 +21,12 @@ export default function Login() {
 
   const onSubmit = (data) => {
     const user = data;
-    dispatch(LoginUser(user)).catch(notify())
+
+    dispatch(LoginUser(user))
+    .then((response) => {
+        redirectToHome("/Home");
+    })
+    .catch(() => notify());
   };
   
   return (

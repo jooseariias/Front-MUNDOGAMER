@@ -76,7 +76,6 @@ export const LoginUser = (userData) => async (dispatch) => {
     if (response.status === 200) {
       dispatch({ type: REGISTER_USER_SUCCESS, payload: response.data });
       
-      window.location.href = "/home";
     } else {
       dispatch({
         type: REGISTER_USER_FAILURE,

@@ -5,7 +5,7 @@ import { useDispatch } from "react-redux";
 import { loginSuccess, loginFailure } from "../redux/actions/index";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from 'react-router-dom';;
+import { useNavigate } from 'react-router-dom';
 
 const URL_BACK = "https://mundogamer.onrender.com"
 export default function Google() {
