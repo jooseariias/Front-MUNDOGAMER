@@ -19,7 +19,7 @@ export const COMPRAR_PRODUCTO_FAILURE = 'COMPRAR_PRODUCTO_FAILURE'
 import Cookies from "js-cookie";
 import axios from "axios";
 
-const  URL_BACK  = "https://mundogamer.onrender.com"
+const  URL_BACK  = "http://localhost:3001"
 
 export const loginSuccess = (user) => {
   const userJSON = JSON.stringify(user);

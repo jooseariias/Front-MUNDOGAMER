@@ -13,7 +13,8 @@ import AdminUser from "./Pages/admin/AdminUser";
 import AdminGetProducts from "./Pages/admin/AdminProducts";
 import Carrito from "./Pages/Carrito";
 import Favoritos from "./Pages/Favoritos";
-
+import PrivateRoute from "./Hooks/PrivateRoute";
+import RoutesUser from "./Hooks/RoutesUsers";
 import NotFound from "./Pages/NotFound";
 function App() {
   return (
@@ -23,44 +24,43 @@ function App() {
         <Route exact path="/" element={<Landing />} />
         <Route exact path="/Login" element={<Login />} />
         <Route exact path="/Register" element={<Register />} />
-        <Route path="*" element={<NotFound/>}/>
-   {/* Rutas del usuario */}
-        <Route exact path="/Home" element={<Home />} />
-       
+        <Route path="*" element={<NotFound />} />
+        {/* Rutas del usuario */}
+        <Route exact path="/Home" element={<RoutesUser element={<Home />} />} />
         <Route
           exact
           path="/Mydata"
-          element={<Mydata  />}
+          element={<RoutesUser element={<Mydata />} />}
         />
         <Route
           exact
           path="/Carrito"
-          element={<Carrito  />}
+          element={<RoutesUser element={<Carrito />} />}
         />
         <Route
           exact
           path="/Games/:id"
-          element={<Games />}
+          element={<RoutesUser element={<Games />} />}
         />
         <Route
           exact
           path="/Favoritos"
-          element={<Favoritos />}
+          element={<RoutesUser element={<Favoritos />} />}
         />
 
         {/* Rutas Admin */}
-        <Route path="/Admin" element={<Admin  />} />
+        <Route path="/Admin" element={<PrivateRoute element={<Admin />} />} />
         <Route
           path="/Admin/Product"
-          element={<AdminProduct  />}
+          element={<PrivateRoute element={<AdminProduct />} />}
         />
         <Route
           path="/Admin/Users"
-          element={<AdminUser />}
+          element={<PrivateRoute element={<AdminUser />} />}
         />
         <Route
           path="/Admin/GetProducts"
-          element={<AdminGetProducts />}
+          element={<PrivateRoute element={<AdminGetProducts />} />}
         />
       </Routes>
     </>
