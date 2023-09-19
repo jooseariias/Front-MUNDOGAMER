@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-const URL_BACK = "http://localhost:3001"
+const URL_BACK = "https://mundogamer.onrender.com"
 export default function Filter({ onPlatformChange, onGenreChange,handlePriceFilterChange }) {
 
   const [platafomas, setPlataformas] = useState([]);

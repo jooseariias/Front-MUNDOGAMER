@@ -2,7 +2,7 @@ import HeaderGlobal from "../../components/headerGlobal/HeaderGlobal";
 import MenuAdmin from "../../components/menuAdmin/MenuAdmin";
 import axios from "axios";
 import { useState, useEffect } from "react";
-const URL_BACK = "http://localhost:3001"
+const URL_BACK = "https://mundogamer.onrender.com"
 export default function AdminProduct() {
   const [platforms, setPlatforms] = useState([]);
   const [genres, setGenres] = useState([]);

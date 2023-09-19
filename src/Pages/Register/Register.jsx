@@ -39,7 +39,7 @@ export default function Register() {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:3001/auth/registrarse",
+        "https://mundogamer.onrender.com/auth/registrarse",
         formData
       );
       if (response.status === 201) {
