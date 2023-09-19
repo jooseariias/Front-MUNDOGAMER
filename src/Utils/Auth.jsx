@@ -5,9 +5,12 @@ import { useDispatch } from "react-redux";
 import { loginSuccess, loginFailure } from "../redux/actions/index";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useNavigate } from 'react-router-dom';;
+
 const URL_BACK = "https://mundogamer.onrender.com"
 export default function Google() {
   const dispatch = useDispatch();
+  const redirectToHome = useNavigate()
   const notify = () => toast("mmm algo salio mal 🤦‍♂️ ");
   const handleGoogleLoginSuccess = (credentialResponse) => {
     axios
@@ -21,7 +24,8 @@ export default function Google() {
           window.location.href = "/admin";
         }
         if(response.data.user.rol === "user"){
-          window.location.href = "/Home";
+          // window.location.href = "/Home";
+          redirectToHome('/Home');
         }
       })
       .catch((error) => {
