@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderLanding from '../components/headerLandig/HeaderLanding'
-import Landi from '../components/landing/Landing'
+import Landi from '../components/landing/Landin'
 
 export default function Landing() {
 
