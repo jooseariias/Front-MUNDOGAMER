@@ -21,7 +21,7 @@ export default function Favoritos() {
   return (
     <div>
       <HeaderGlobal />
-      <div className="flex mt-5 ml-3 gap-5">
+      <div className="flex flex-wrap mt-5 ml-3 gap-5">
         {favorite && favorite.length !== 0 ? (
           favorite.map(({ id, name, image, precio, nombre }) => {
             return (
