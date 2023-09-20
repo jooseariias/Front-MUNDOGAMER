@@ -32,8 +32,8 @@ export default function FilterMobile({ onPlatformChange, onGenreChange,handlePri
           defaultValue="all" // Set default value here
         >
           <option value="all">Precio</option>
-          <option value="higher">Menor</option>
-          <option value="lower">Mayor</option>
+          <option value="higher">Mayor</option>
+          <option value="lower">Menor</option>
         </select>
       </div>
       <div>
